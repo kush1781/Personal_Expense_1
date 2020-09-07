@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link 
+        rel="stylesheet" 
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
+        crossorigin="anonymous"
+    >
+    <script 
+        src="https://kit.fontawesome.com/7696837ea0.js" 
+        crossorigin="anonymous">
+    </script>
+    <title>Personal Expense</title>
+</head>
+  <body>
+    <!-- NAV BAR -->
+    <nav class="navbar navbar-dark sticky-top bg-primary">
+      <span><a class="navbar-brand" href="#">Expenses!!</a></span>
+      <!-- ADD TOTAL -->
+      <span class="navbar-brand" id="headingTotal"></span>
+    </nav>
+
+    <div class="container-fluid bg-light" style="min-height: 100vh;">
+      <div class="container">
+          <!-- ADD EXPENSE BODY -->
+          <div class="jumbotron mt-4">
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                      <span class="input-group-text" id="spent in rupee">Rs</span>
+                  </div>
+                  <input 
+                      id="inputAmount"
+                      type="text"
+                      class="form-control"
+                      placeholder="Amount Spent"
+                      aria-label="Amount Spent"
+                      aria-describedby="spent in rupee"
+                  >
+              </div>
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                      <span class="input-group-text" id="spent at">@</span>
+                  </div>
+                  <input 
+                      id="inputDesc"
+                      type="text"
+                      class="form-control"
+                      placeholder="Spent On"
+                      aria-label="Spent On"
+                      aria-describedby="spent at"
+                  >
+                  <div class="input-group-append">
+                      <button
+                        id="btnAddExpense"
+                        class="btn btn-outline-primary" 
+                        type="button" 
+                      >Add</button>
+                  </div>
+              </div>
+          </div>
+          <!-- ADD EXPENSE HISTORY BODY -->
+          <div>
+              <ul class="list-group" id="expenseTable"></ul>
+          </div>
+      </div>
+    </div>
+
+    <div id="expenseTable"></div> 
+    <!-- MAIN JS File -->
+    <script src='main.js'></script>
+  </body>
+</html>
